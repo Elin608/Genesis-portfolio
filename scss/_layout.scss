@@ -1,0 +1,102 @@
+@use "./variables" as *;
+
+body{
+    margin:0;
+    font-family:"mulish", sans-serif;
+    background-color: white;
+}
+
+.main{
+    max-width:$container-widht;
+    padding: 0 23px;
+    margin: 0 auto;
+}
+
+.main-nav{
+    padding:32px 0 ;
+}
+.nav-inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.logo{
+    font-weight: 700;
+    font-size: 20px;
+    
+    }
+.nav-links{
+    display: flex;
+    gap:32px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.nav-links a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+.hero{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: $spacing-hero-top;
+    margin-bottom: $spacing-hero-bottom;
+  
+
+}
+.hero-left{
+    width: $hero-left-width;
+    flex: 0 0 635px;
+   
+}
+.hero-left h1{
+    font-size: 40px;
+    line-height: 60px;
+    margin: 0;
+}
+.hero-left h1 span{
+    color: $accent-color;
+}
+.hero-right{
+    width:$hero-right-width;
+    align-self: flex-start;
+    padding-top: $hero-right-offset-top;
+
+}
+.subtitle{
+    margin:0 0 32 0px ;
+    font-size: 22px;
+    color: $accent-color;
+}
+.gallery{
+    margin-top:144px;
+    
+}
+.gallery .grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 10px;
+    gap: 20px;
+   
+    
+  
+}
+.grid img{
+width: 100%;
+height: auto;
+display: block;
+
+}
+.img1{
+    grid-column: 1;
+    grid-row: span 1;
+
+}
+
+
+
+
