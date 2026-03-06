@@ -5,8 +5,8 @@ body {
 }
 
 .container {
-  max-width: 1109px;
-  padding: 0 23px;
+  max-width: 1440px;
+  padding: 0 125px;
   margin: 0 auto;
 }
 
@@ -45,7 +45,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-top: 64gipx;
+  margin-top: 64px;
   margin-bottom: 144px;
 }
 
@@ -192,44 +192,85 @@ body {
 }
 
 .about {
-  display: grid;
-  grid-template-columns: 635px 1fr 1fr;
-  column-gap: 80px;
-  align-items: center;
-  margin-top: 91px;
-  margin-bottom: 101px;
-  min-width: 1109px;
-  padding: 40px 20px;
+  margin-top: 96px;
+  margin-bottom: 61px;
 }
 
-.about_text {
+.about .container {
   display: grid;
-  grid-template-columns: 635px auto auto;
-  gap: 94px;
+  grid-template-columns: 635px 1fr;
+  align-items: start;
 }
 
-.service1 .service2 {
-  list-style: none;
-  padding: 0;
+.about-left h1 {
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 700;
+  margin: 0 0 28px 0;
+}
+
+.about-left p {
+  font-size: 16px;
+  line-height: 1.6;
   margin: 0;
-  gap: 70px;
+  color: #111;
+  max-width: 635px;
+}
+
+.about-text {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 70px;
+  align-items: start;
+  margin-top: 10px;
+}
+
+.service1,
+.service2 {
+  list-style: none;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.service1 li,
+.service2 li {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 10px;
 }
 
 .service1 {
-  margin-left: 24px;
+  font-weight: 700;
+  gap: 70px;
 }
 
-.container {
-  max-width: 1109px;
-  padding: 0 23px;
-  margin: 0 auto;
+.service2 {
+  font-weight: 400;
+  gap: 70px;
+}
+
+.project-image img {
+  display: block;
+  margin: 40px auto 45px;
+}
+
+.main-nav .project-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 125px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
 }
 
 .main-footer {
   margin-top: 114px;
 }
 
-.container-footer-inner {
+.container.footer-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
