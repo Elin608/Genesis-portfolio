@@ -3,12 +3,12 @@
 body{
     margin:0;
     font-family:"mulish", sans-serif;
-    background-color: white;
+    background-color: $white;
 }
 
 .container{
     max-width:$container-width;
-    padding: 0 125px;
+    padding: $container-padding;
     margin: 0 auto;
 }
 
@@ -19,15 +19,13 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
 }
 .logo{
      font-weight: 700;
     font-size: 20px;
     width: 90px;
     height: 19px;
-    
-    }
+}
 .nav-links{
     display: flex;
     gap:32px;
@@ -38,7 +36,7 @@ body{
 .nav-links a{
     text-decoration: none;
     color: black;
-    font-size: 18px;
+    font-size:$font-nav;
 }
 
 .hero{
@@ -54,7 +52,7 @@ body{
    
 }
 .hero-left h1{
-    font-size: 40px;
+    font-size: $font-h1;
     line-height: 60px;
     margin: 0;
 }
@@ -65,29 +63,24 @@ body{
     width:$hero-right-width;
     align-self: flex-start;
     padding-top: $hero-right-offset-top;
-
 }
 
 .subtitle{
     margin:0 0 32 0px ;
-    font-size: 22px;
+    font-size:$font-subtitle;
     color: $accent-color;
 }
 .grid-position{
     margin-top:144px;
     width: 100%;
     justify-content: center;
-    
-    
 }
 .grid-container{
     display: grid;
     width: 100%;
     grid-template-columns: repeat(9, 1fr);
     grid-template-rows: repeat(32 1fr);
-    gap: 10px;
-    
-    
+    gap:$award-grid;
 }
    
 .grid-container img{
@@ -108,8 +101,8 @@ object-fit: cover;
 .img3{
     grid-column: 7/10;
     grid-row: 1/3;
-    
 }
+    
 .img4{
     grid-column: 1/4;
     grid-row: 2/4;
@@ -137,7 +130,6 @@ object-fit: cover;
 .img10{
     grid-column: 1/4;
     grid-row: 6/8;
-    
 }
 .img11{
     grid-column: 4/7;
@@ -152,11 +144,7 @@ object-fit: cover;
     grid-template-columns:$award-grid;
     column-gap:$award-gap;
     padding:$section-padding;
-  
     align-items: start;
-      
-   
-
 }
 .award-org{
     grid-column: 1;
@@ -180,78 +168,53 @@ object-fit: cover;
     grid-row: 1;
     justify-self: end;
 }
-
-    
-
-
-
-
-
-
-
-
-
 .about{
     
     margin-top: 96px;
      margin-bottom: 61px;
-    
-    
-    
 }
 .about .container{
-    display: grid;
+    display:block;
     grid-template-columns: 635px 1fr;
     align-items: start;
 }
-.about-left h1{
-    font-size: 40px;
-    line-height: 1.2;
-    font-weight: 700;
-    margin: 0 0 28px 0;
-  
-}
-.about-left p{
-    font-size: 16px;
-    line-height: 1.6;
-    margin: 0;
-    color:#111;
-    max-width: 635px;
-}
 .about-text{
     display: grid;
-    grid-template-columns: auto 1fr;
-    column-gap: 70px;
+    grid-template-columns:635px 1fr 1fr;
     align-items: start;
     margin-top: 10px;
+     column-gap: 94px;
+}
+.about-text p{
+    color: $text-color;
+    font-size: 18px;
+    margin: 0;
 }
 .service1,
 .service2{
-
 list-style: none;
 line-height: 1.2;
 margin: 0;
 }
    .service1 li,
    .service2 li{
-    font-size: 18px;
+    font-size:$font-body;
     line-height: 1.6;
     margin-bottom: 10px;
    }
-   .service1{
-    font-weight: 700;
-    gap: 70px;
-   }
-   .service2{
-    font-weight: 400;
-    gap: 70px;
-   }
+ 
    .project-image img{
     display: block;
+    width: 100%;
+    height: auto;
     margin: 40px auto 45px;
    }
-   
-   
+   .project-text p{
+    font-size: 16px;
+    color: $text-color;
+    line-height: 26px;
+    margin: 0;
+   }
    .main-nav .project-container{
     display: flex;
     justify-content: space-between;
@@ -261,13 +224,12 @@ margin: 0;
    .nav-links{
     display: flex;
     gap: 32px;
-    
 }
  
 .main-footer{
     margin-top: 114px;
 }
-.container.footer-inner{
+.container-footer-inner{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -277,14 +239,12 @@ margin: 0;
     font-size: 20px;
     width: 90px;
     height: 19px;
-    
-    }
+}
 .footer-links a{
-   
-    text-decoration: none;
-    font-weight: 67px;
-    color: black;
-    font-size: 18px;
+   text-decoration: none;
+    font-weight: 700;
+    color:$black;
+    font-size:$font-nav;
 }
 .footer-links{
     display: flex;
@@ -300,14 +260,79 @@ ul{
     display: flex;
     gap: 16px;
     align-items: center;
-  
 }
 .footer-social img{
   width: 19px;
     height: 19px;
 }
-
-
+.contact-top{
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    align-items:start;
+    column-gap: 180px;
+    justify-content: center;
+}
+.contact-left{
+    width: 100%;
+    max-width: 350px;
+}
+.contact-left h1{
+    font-size: $font-h1;
+    line-height: 1.2;
+    margin: 0 0 22px 0;
+}
+.contact-left p{
+    font-size: 16px;
+    line-height: 1.6;
+    color:$text-color;
+    margin: 0;
+}
+.contact-form{
+    width: 100%;
+    max-width: 445px;
+}
+.contact-form form{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.contact-form input,
+.contact-form textarea{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #d8d8d8;
+    padding: 0 0 16px 0;
+    font-size: 16px;
+    outline: none;
+}
+.contact-form textarea{
+    resize: none;
+    min-height: 37px;
+}
+.contact-form button{
+    width: 125px;
+    height: 50px;
+    border: none;
+    background-color: #4a4ff2;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+.contact-page{
+    margin-top: 96px;
+}
+.contact-map{
+    margin-top: 120px;
+}
+.contact-map img{
+    width: 100%;
+    display: block;
+}
+.main-nav .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 
 
